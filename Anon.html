@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Secret Love</title>
+    <style> 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: #fff9f5;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: #fffbf7;
+            max-width: 500px;
+            width: 100%;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header {
+            font-size: 1.8em;
+            color: #b56576;
+            margin-bottom: 1em;
+            font-weight: bold;
+        }
+
+        p.intro {
+            color: #8a4b57;
+            margin-bottom: 1.5em;
+            font-size: 1.1em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+        }
+
+        form label {
+            font-size: 0.9em;
+            color: #7d3c4f;
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 0.8em;
+            border: 1px solid #e4c7c3;
+            border-radius: 5px;
+            background-color: #fff9f5;
+            color: #333;
+            font-size: 1em;
+            font-family: 'Georgia', serif;
+        }
+
+        form input:focus, form textarea:focus {
+            border-color: #b56576;
+            outline: none;
+        }
+
+        form button {
+            background-color: #b56576;
+            color: #fff;
+            padding: 0.8em 2em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Georgia', serif;
+        }
+
+        form button:hover {
+            background-color: #8a4b57;
+        }
+
+        #form-message {
+            margin-top: 1.5em;
+            color: #8a4b57;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+        footer {
+            font-size: 0.8em;
+            color: #7d3c4f;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            To My Secret Love
+        </header>
+        
+        <p class="intro">I may not have the courage to reveal myself, but I wanted to let you know how much you mean to me...</p>
+        
+        <form id="love-form">
+            <label for="name">Your Secret Name</label>
+            <input type="text" id="name" name="name" placeholder="Your secret identity" required>
+
+            <label for="name">Email your Crush</label>
+            <input type="text" id="name" name="name" placeholder="her/his email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Pour your heart out..." rows="5" required></textarea>
+            
+            <button type="submit">Send Secret Message</button>
+        </form>
+        
+        <p id="form-message"></p>
+        
+        <footer>
+            <p>&copy; 2024 An Anonymous Heart by Sij</p>
+        </footer>
+    </div>
+    
+
+    <script>
+        document.getElementById('love-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value || "Someone Special";
+            const formMessage = document.getElementById('form-message');
+            
+            formMessage.textContent = `Your message has flown to them, ${name}. They may never know who you are, but they’ll feel your love. ❤️`;
+            this.reset();
+        });
+    </script>
+</body>
+</html>
